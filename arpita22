@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt
+filtered_data=data[data['am'].isin([0,1])]
+counts=filtered_data['am'].value_counts()
+counts.plot(kind='bar',color=['skyblue','pink'])
+plt.title('number  of cars by transmission type')
+plt.xlabel('transmission type')
+plt.ylabel('cars')
+plt.xticks(ticks=[0,1],labels=['Manual','Automatic'],rotation=0)
+plt.show()
